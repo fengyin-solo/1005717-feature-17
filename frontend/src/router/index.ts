@@ -13,6 +13,7 @@ const Transformermaint = () => import('@/views/transformermaint/index.vue')
 const Breaker = () => import('@/views/breaker/index.vue')
 const Dcsystem = () => import('@/views/dcsystem/index.vue')
 const Insulationtest = () => import('@/views/insulationtest/index.vue')
+const InsulationtestDetail = () => import('@/views/insulationtest/detail.vue')
 const Defect = () => import('@/views/defect/index.vue')
 const Workpermit = () => import('@/views/workpermit/index.vue')
 const Patrol = () => import('@/views/patrol/index.vue')
@@ -36,6 +37,7 @@ const router = createRouter({
     { path: '/breaker', name: 'breaker', component: Breaker },
     { path: '/dcsystem', name: 'dcsystem', component: Dcsystem },
     { path: '/insulationtest', name: 'insulationtest', component: Insulationtest },
+    { path: '/insulationtest/:id', name: 'insulationtest-detail', component: InsulationtestDetail },
     { path: '/defect', name: 'defect', component: Defect },
     { path: '/workpermit', name: 'workpermit', component: Workpermit },
     { path: '/patrol', name: 'patrol', component: Patrol },
