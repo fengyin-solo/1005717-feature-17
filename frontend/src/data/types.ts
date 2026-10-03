@@ -1,11 +1,22 @@
 /** 纯前端数据层的公共类型：与全栈版后端返回的结构保持一致，换回后端时页面不用改。 */
 
+/** 操作留痕：谁、属于哪个班组、在什么时候、做了什么，越权退回也要记下来便于追查。 */
+export type AuditEntry = {
+  at: string
+  operator: string
+  crew: string
+  action: string
+  detail?: string
+  reason?: string
+  rejected?: boolean
+}
+
 export type EntryRow = {
   id: number
   status: string
   pending: boolean
   abnormal: boolean
-  [field: string]: string | number | boolean
+  [field: string]: string | number | boolean | AuditEntry[]
 }
 
 export type ModuleMeta = {
